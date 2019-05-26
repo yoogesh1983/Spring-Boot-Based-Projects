@@ -5,7 +5,7 @@ http://localhost:8888/portal/dispatcher/home
 Steps to compile:
 =================
 
-1) Right click on project select Run ----> Maven build ... 
+1) Right click on project select Run ----> Maven build .... 
 2) Under Main Tab in Goal Section do the following ---> clean install
 3) Under JRE tab, select alternate JRE and select the JDK you have setup from Runtime environment
 4) Save a name as SpringBootJarCompiler and then save

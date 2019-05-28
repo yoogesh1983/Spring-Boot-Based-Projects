@@ -1,6 +1,6 @@
 # What is the Application about? </br>
 - This is an <b>OAuth2</b> Spring Security application that handles the <b>AuthorizationServer</b> part
-- A video lecture related to this project can be found <a href="">C:\Users\yooge\OneDrive\01 - Notes\My_Web_Site\06_Spring_Framework\01_Spring_Security\03_Videos\02_OAuth2 Authorization Server.mp4</a>
+- A video lecture related to this project can be found <a href="C:\Users\yooge\OneDrive\01 - Notes\My_Web_Site\06_Spring_Framework\01_Spring_Security\03_Videos\02_OAuth2 Authorization Server.mp4">here</a>
 
 # How to Compile the Application? </br>
 > Right click on project select Run -> Maven build .... </br>

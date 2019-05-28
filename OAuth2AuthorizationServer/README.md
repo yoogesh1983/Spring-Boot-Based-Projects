@@ -2,16 +2,16 @@
 - This is an <b>OAuth2</b> Spring Security application that handles the <b>AuthorizationServer</b> part
 - A video lecture related to this project can be found at <a href="https://www.youtube.com/watch?v=wxebTn_a930" target="_blank">C:/Users/yooge/OneDrive\01 - Notes/My_Web_Site/06_Spring_Framework/01_Spring_Security/03_Videos/02_OAuth2 Authorization Server.mp4</a></br>
 
-# How to Compile the Application? </br>
+# How to Compile and Rune the Application? </br>
 > Right click on project select Run -> Maven build .... </br>
 > Under Main Tab in Goal Section do the following -> clean install </br>
 > Under JRE tab, select alternate JRE and select the JDK you have setup from Runtime environment </br>
 > Save a name as SpringBootJarCompiler and then save </br>
 
-# How to run the application in a Tradional way? </br>
+Use below step to run the application in a Tradional way </br>
 > select com.codetutr.config.dispatcher.ServletInitializer.java -> run as -> Java Application </br>
 
-# How to run the application in a SpringBoot Runner way? </br>
+Use below step to run the application in a SpringBoot Runner way? </br>
 > Click to Run icon -> Run Configurtaion -> Double click to SpringBootAPP -> And configure a Runner </br>
 > Save a name as SpringBootJarRunner and then save </br>
 

@@ -17,16 +17,11 @@
 
 The application can now be browsed at http://localhost:8888/portal/dispatcher/home </br>
 
-Process to generate a file
-==========================
-#Generate a cert
-keytool -genkeypair -alias JWT_KEY -keyalg RSA -keypass password -keystore jwt.jks -storepass password
-
-#Import a cert into a folder
-keytool -importkeystore -srckeystore JWT_KEY.jks -destkeystore jwt.jks -deststoretype pkcs12
-
-#This one will be used to get the public key from the cert. Resource server will use it
-keytool -list -rfc --keystore jwt.jks | openssl x509 -inform pem -pubkey
+# Steps to generate Cert As mentained in a Video </br>
+> keytool -genkeypair -alias JWT_KEY -keyalg RSA -keypass password -keystore jwt.jks -storepass password
+> keytool -importkeystore -srckeystore JWT_KEY.jks -destkeystore jwt.jks -deststoretype pkcs12
+By the way, if the Resource server wants to use the public key of this cert, then below command can be fired </br>
+> keytool -list -rfc --keystore jwt.jks | openssl x509 -inform pem -pubkey
 
 
 

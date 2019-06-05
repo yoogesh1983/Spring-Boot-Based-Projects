@@ -17,14 +17,19 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 public class AuthenticationConfig {
 	
+	private AuthenticationManagerBuilder authenticationManagerBuilder;
+	
+	@Autowired
+	private AuthenticationConfig(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
+		this.authenticationManagerBuilder = authenticationManagerBuilder;
+	}
+	
 	/**
 	 * {@link InMemoryUserDetailsManager} extends UserDetailsService and will be the default userDetailsService if you din’t registered a custom one<p>
 	 */
-	private UserDetailsService userDetailsService;
-	
-	@Autowired
-	private AuthenticationConfig(AuthenticationManagerBuilder auth) throws Exception {
-		userDetailsService = auth.inMemoryAuthentication().getUserDetailsService();
+	@Bean
+	private UserDetailsService getUserDetailsService() throws Exception {
+		return this.authenticationManagerBuilder.inMemoryAuthentication().getUserDetailsService();
 	}
 
 	@Bean
@@ -37,7 +42,7 @@ public class AuthenticationConfig {
 	@Bean
 	public DaoAuthenticationProvider getDaoauthenticationProvider() throws Exception {
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
-		authenticationProvider.setUserDetailsService(userDetailsService);
+		authenticationProvider.setUserDetailsService(getUserDetailsService());
 		authenticationProvider.setPasswordEncoder(passwordEncoder());
 		return authenticationProvider;
 	}

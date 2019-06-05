@@ -20,8 +20,31 @@ CREATE TABLE oauth_client_details (
 	autoapprove VARCHAR(255)
 );
 
-INSERT INTO oauth_client_details( client_id) VALUES ('1');
-
+ INSERT INTO oauth_client_details (
+	client_id,
+	client_secret,
+	resource_ids,
+	scope,
+	authorized_grant_types,
+	web_server_redirect_uri,
+	authorities,
+	access_token_validity,
+	refresh_token_validity,
+	additional_information,
+	autoapprove)
+	VALUES(
+    'USER_CLIENT_APP',
+    '{bcrypt}$2a$10$EOs8VROb14e7ZnydvXECA.4LoIhPOoFHKvVF/iBZ/ker17Eocz4Vi',
+	'USER_CLIENT_RESOURCE,USER_ADMIN_RESOURCE',
+	'role_admin,role_user',
+	'authorization_code,password,refresh_token,implicit',
+	NULL,
+	NULL,
+	900,
+	3600,
+	'{}',
+	NULL);
+	
 CREATE TABLE oauth_client_token (
 	authentication_id VARCHAR(255) PRIMARY KEY,
 	token_id VARCHAR(255),

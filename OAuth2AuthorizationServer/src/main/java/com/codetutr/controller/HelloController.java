@@ -17,7 +17,7 @@ public class HelloController {
 	
     @RequestMapping("/home")
     public ModelAndView home() {
-    	System.out.println(springEmJPADao.getUserByName(null));
+    	System.out.println(springEmJPADao.test());
     	
         Date date = new Date();
         return new ModelAndView("hello", "dateandTIme", date);
